@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": [
+    {
+      "_id": "60d3b41abdacab0026a733c6",
+      "name": "Краторная булка",
+      "type": "bun",
+      "proteins": 80,
+      "fat": 24,
+      "carbohydrates": 53,
+      "calories": 420,
+      "price": 1255,
+      "image": "",
+      "image_mobile": "",
+      "image_large": ""
+    },
+    {
+      "_id": "60d3b41abdacab0026a733cc",
+      "name": "Соус Spicy-X",
+      "type": "sauce",
+      "proteins": 50,
+      "fat": 14,
+      "carbohydrates": 11,
+      "calories": 30,
+      "price": 90,
+      "image": "",
+      "image_mobile": "",
+      "image_large": ""
+    }
+  ]
+}
