@@ -6,7 +6,6 @@ const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   moduleNameMapper: {
-    // автоматически берём пути из tsconfig
     ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' })
   }
 };
