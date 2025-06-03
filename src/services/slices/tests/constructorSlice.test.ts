@@ -24,7 +24,7 @@ const bun: TIngredient = {
 const sauce: TIngredient = { ...bun, _id: 'id2', type: 'sauce', name: 'Соус' };
 
 describe('constructorSlice', () => {
-  it('добавляет булку', () => {
+  it('добавляет булочку', () => {
     const next = reducer(undefined, setBun(bun));
     expect(next.bun?._id).toBe('bun1');
   });
