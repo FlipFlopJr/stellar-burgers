@@ -1,12 +1,12 @@
 import reducer, { fetchIngredients } from '../ingredientsSlice';
 
 describe('ingredientsSlice', () => {
-  it('pending ставит isLoading=true', () => {
+  it('put isLoading=true', () => {
     const next = reducer(undefined, fetchIngredients.pending('', undefined));
     expect(next.isLoading).toBe(true);
   });
 
-  it('fulfilled сохраняет данные', () => {
+  it('fulfilled saves data', () => {
     const mock = [
       {
         _id: '1',
@@ -30,7 +30,7 @@ describe('ingredientsSlice', () => {
     expect(next.isLoading).toBe(false);
   });
 
-  it('rejected сохраняет ошибку', () => {
+  it('rejected saves mistake', () => {
     const next = reducer(
       undefined,
       fetchIngredients.rejected(new Error('fail'), '', undefined, 'fail')
