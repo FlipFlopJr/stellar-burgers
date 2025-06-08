@@ -1,19 +1,19 @@
-import { useSelector } from '../../services/store';
-
 import styles from './constructor-page.module.css';
 
 import { BurgerIngredients } from '../../components';
 import { BurgerConstructor } from '../../components';
 import { Preloader } from '../../components/ui';
 import { FC } from 'react';
+import { useAppSelector } from '../../services/hooks';
+
+import { selectInventoryState } from '../../services/slices/inventSlice/inventSlice';
 
 export const ConstructorPage: FC = () => {
-  /** TODO: взять переменную из стора */
-  const isIngredientsLoading = false;
+  const isInventoryLoading = useAppSelector(selectInventoryState).isLoading;
 
   return (
     <>
-      {isIngredientsLoading ? (
+      {isInventoryLoading ? (
         <Preloader />
       ) : (
         <main className={styles.containerMain}>

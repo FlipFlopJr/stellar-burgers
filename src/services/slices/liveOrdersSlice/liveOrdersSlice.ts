@@ -18,7 +18,7 @@ export const initialState: TStateOrdersLive = {
   liveOrders: []
 };
 
-export const fetchLiveOrders = createAsyncThunk(
+export const liveOrdersFetch = createAsyncThunk(
   'liveOrders/fetchAll',
   ApiGetFeeds
 );
@@ -32,15 +32,15 @@ export const liveOrdersSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchLiveOrders.pending, (state) => {
+      .addCase(liveOrdersFetch.pending, (state) => {
         state.isLoading = true;
         state.fetchError = null;
       })
-      .addCase(fetchLiveOrders.rejected, (state, action) => {
+      .addCase(liveOrdersFetch.rejected, (state, action) => {
         state.isLoading = false;
         state.fetchError = action.error.message as string;
       })
-      .addCase(fetchLiveOrders.fulfilled, (state, action) => {
+      .addCase(liveOrdersFetch.fulfilled, (state, action) => {
         state.completedToday = action.payload.totalToday;
         state.liveOrders = action.payload.orders;
         state.totalCompleted = action.payload.total;

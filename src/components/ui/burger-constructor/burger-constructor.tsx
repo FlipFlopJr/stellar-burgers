@@ -19,14 +19,15 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
   closeOrderModal
 }) => (
   <section className={styles.burger_constructor}>
-    {constructorItems.bun ? (
+    {}
+    {constructorItems.selectedBun ? (
       <div className={`${styles.element} mb-4 mr-4`}>
         <ConstructorElement
           type='top'
           isLocked
-          text={`${constructorItems.bun.name} (верх)`}
-          price={constructorItems.bun.price}
-          thumbnail={constructorItems.bun.image}
+          text={`${constructorItems.selectedBun.name} (верх)`}
+          price={constructorItems.selectedBun.price}
+          thumbnail={constructorItems.selectedBun.image}
         />
       </div>
     ) : (
@@ -36,14 +37,17 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         Выберите булки
       </div>
     )}
+
+    {}
     <ul className={styles.elements}>
-      {constructorItems.ingredients.length > 0 ? (
-        constructorItems.ingredients.map(
+      {Array.isArray(constructorItems.filling) &&
+      constructorItems.filling.length > 0 ? (
+        constructorItems.filling.map(
           (item: TConstructorIngredient, index: number) => (
             <BurgerConstructorElement
               ingredient={item}
               index={index}
-              totalItems={constructorItems.ingredients.length}
+              totalItems={constructorItems.filling.length}
               key={item.id}
             />
           )
@@ -56,14 +60,16 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         </div>
       )}
     </ul>
-    {constructorItems.bun ? (
+
+    {}
+    {constructorItems.selectedBun ? (
       <div className={`${styles.element} mt-4 mr-4`}>
         <ConstructorElement
           type='bottom'
           isLocked
-          text={`${constructorItems.bun.name} (низ)`}
-          price={constructorItems.bun.price}
-          thumbnail={constructorItems.bun.image}
+          text={`${constructorItems.selectedBun.name} (низ)`}
+          price={constructorItems.selectedBun.price}
+          thumbnail={constructorItems.selectedBun.image}
         />
       </div>
     ) : (
@@ -73,6 +79,8 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         Выберите булки
       </div>
     )}
+
+    {}
     <div className={`${styles.total} mt-10 mr-4`}>
       <div className={`${styles.cost} mr-10`}>
         <p className={`text ${styles.text} mr-2`}>{price}</p>
@@ -87,12 +95,14 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
       />
     </div>
 
+    {}
     {orderRequest && (
       <Modal onClose={closeOrderModal} title={'Оформляем заказ...'}>
         <Preloader />
       </Modal>
     )}
 
+    {}
     {orderModalData && (
       <Modal
         onClose={closeOrderModal}
