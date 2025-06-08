@@ -1,7 +1,7 @@
-import reducer, { initialState } from './liveOrdersSlice';
-import { liveOrdersFetch } from './liveOrdersSlice';
+import reducer, { initialState } from './userOrdersSlice';
+import { liveOrdersFetch } from './userOrdersSlice';
 
-describe('liveOrdersSlice: тесты для загрузки живых заказов', () => {
+describe('userOrdersSlice: тесты для загрузки живых заказов', () => {
   it('устанавливает ошибку при неудаче запроса (rejected)', () => {
     const state = reducer(initialState, {
       type: liveOrdersFetch.rejected.type,

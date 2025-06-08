@@ -6,7 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../services/hooks';
 import {
   selectLiveOrdersState,
   liveOrdersFetch
-} from '../../services/slices/liveOrdersSlice/liveOrdersSlice';
+} from '../../services/slices/userOrdersSlice/userOrdersSlice';
 
 export const Feed: FC = () => {
   const { liveOrders, isLoading } = useAppSelector(selectLiveOrdersState);

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { selectLiveOrdersState } from '../../services/slices/liveOrdersSlice/liveOrdersSlice';
+import { selectLiveOrdersState } from '../../services/slices/userOrdersSlice/userOrdersSlice';
 import { useAppSelector } from '../../services/hooks';
 import { FeedInfoUI } from '../ui/feed-info';
 import { TOrder } from '@utils-types';

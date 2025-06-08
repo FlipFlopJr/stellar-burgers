@@ -2,19 +2,19 @@ import { ApiGetFeeds } from '../../../utils/burger-api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder } from '@utils-types';
 
-type TStateOrdersLive = {
+type TStateOrdersUsers = {
+  completedToday: number;
+  totalCompleted: number;
   fetchError: string | null;
   isLoading: boolean;
-  totalCompleted: number;
-  completedToday: number;
   liveOrders: TOrder[];
 };
 
-export const initialState: TStateOrdersLive = {
-  completedToday: 0,
-  totalCompleted: 0,
+export const initialState: TStateOrdersUsers = {
   fetchError: null,
   isLoading: false,
+  completedToday: 0,
+  totalCompleted: 0,
   liveOrders: []
 };
 

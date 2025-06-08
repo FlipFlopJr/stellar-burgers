@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">59.51% </span>
+                <span class="strong">82.7% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>172/289</span>
+                <span class='fraction'>153/185</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3.12% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/64</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">41.93% </span>
+                <span class="strong">69.35% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>39/93</span>
+                <span class='fraction'>43/62</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.96% </span>
+                <span class="strong">85.95% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>158/255</span>
+                <span class='fraction'>153/178</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <div class="pad1">
 <table class="coverage-summary">
 <thead>
@@ -79,7 +79,7 @@
 </tr>
 </thead>
 <tbody><tr>
-	<td class="file medium" data-value="services/slices/accountSlice"><a href="services/slices/accountSlice/index.html">services/slices/accountSlice</a></td>
+	<td class="file medium" data-value="accountSlice"><a href="accountSlice/index.html">accountSlice</a></td>
 	<td data-value="75.51" class="pic medium">
 	<div class="chart"><div class="cover-fill" style="width: 75%"></div><div class="cover-empty" style="width: 25%"></div></div>
 	</td>
@@ -94,7 +94,7 @@
 	</tr>
 
 <tr>
-	<td class="file high" data-value="services/slices/burgerSlice"><a href="services/slices/burgerSlice/index.html">services/slices/burgerSlice</a></td>
+	<td class="file high" data-value="burgerSlice"><a href="burgerSlice/index.html">burgerSlice</a></td>
 	<td data-value="91.42" class="pic high">
 	<div class="chart"><div class="cover-fill" style="width: 91%"></div><div class="cover-empty" style="width: 9%"></div></div>
 	</td>
@@ -109,7 +109,7 @@
 	</tr>
 
 <tr>
-	<td class="file high" data-value="services/slices/inventSlice"><a href="services/slices/inventSlice/index.html">services/slices/inventSlice</a></td>
+	<td class="file high" data-value="inventSlice"><a href="inventSlice/index.html">inventSlice</a></td>
 	<td data-value="93.75" class="pic high">
 	<div class="chart"><div class="cover-fill" style="width: 93%"></div><div class="cover-empty" style="width: 7%"></div></div>
 	</td>
@@ -124,7 +124,22 @@
 	</tr>
 
 <tr>
-	<td class="file high" data-value="services/slices/liveOrdersSlice"><a href="services/slices/liveOrdersSlice/index.html">services/slices/liveOrdersSlice</a></td>
+	<td class="file high" data-value="lookupOrderSlice"><a href="lookupOrderSlice/index.html">lookupOrderSlice</a></td>
+	<td data-value="83.33" class="pic high">
+	<div class="chart"><div class="cover-fill" style="width: 83%"></div><div class="cover-empty" style="width: 17%"></div></div>
+	</td>
+	<td data-value="83.33" class="pct high">83.33%</td>
+	<td data-value="18" class="abs high">15/18</td>
+	<td data-value="100" class="pct high">100%</td>
+	<td data-value="0" class="abs high">0/0</td>
+	<td data-value="57.14" class="pct medium">57.14%</td>
+	<td data-value="7" class="abs medium">4/7</td>
+	<td data-value="88.23" class="pct high">88.23%</td>
+	<td data-value="17" class="abs high">15/17</td>
+	</tr>
+
+<tr>
+	<td class="file high" data-value="userOrdersSlice"><a href="userOrdersSlice/index.html">userOrdersSlice</a></td>
 	<td data-value="94.44" class="pic high">
 	<div class="chart"><div class="cover-fill" style="width: 94%"></div><div class="cover-empty" style="width: 6%"></div></div>
 	</td>
@@ -138,21 +153,6 @@
 	<td data-value="18" class="abs high">17/18</td>
 	</tr>
 
-<tr>
-	<td class="file low" data-value="utils"><a href="utils/index.html">utils</a></td>
-	<td data-value="27.86" class="pic low">
-	<div class="chart"><div class="cover-fill" style="width: 27%"></div><div class="cover-empty" style="width: 73%"></div></div>
-	</td>
-	<td data-value="27.86" class="pct low">27.86%</td>
-	<td data-value="122" class="abs low">34/122</td>
-	<td data-value="0" class="pct low">0%</td>
-	<td data-value="58" class="abs low">0/58</td>
-	<td data-value="0" class="pct low">0%</td>
-	<td data-value="38" class="abs low">0/38</td>
-	<td data-value="21.27" class="pct low">21.27%</td>
-	<td data-value="94" class="abs low">20/94</td>
-	</tr>
-
 </tbody>
 </table>
 </div>
@@ -161,7 +161,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-06-08T17:38:27.942Z
+                at 2025-06-08T18:17:18.821Z
             </div>
         <script src="prettify.js"></script>
         <script>

@@ -70,7 +70,8 @@ describe('burgerSlice: редьюсеры и асинхронные действ
   it('должен добавлять ингредиент типа "main" в список filling', () => {
     const state = reducer(initialState, addItem(mainIngredient));
     expect(state.builderData.filling).toHaveLength(1);
-    expect(state.builderData.filling[0].id).toBe(mainIngredient.id);
+    expect(state.builderData.filling[0]._id).toBe(mainIngredient._id); // Сравниваем по _id
+    expect(state.builderData.filling[0].type).toBe('main');
   });
 
   it('перемещает ингредиент вниз внутри filling', () => {

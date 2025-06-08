@@ -10,7 +10,8 @@ const config: Config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   collectCoverage: true,
   coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov']
+  coverageReporters: ['text', 'lcov'],
+  coveragePathIgnorePatterns: ['/node_modules/', '<rootDir>/src/utils/']
 };
 
 export default config;

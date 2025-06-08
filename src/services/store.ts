@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import burgerSlice from './slices/burgerSlice/burgerSlice';
-import liveOrdersSlice from './slices/liveOrdersSlice/liveOrdersSlice';
+import liveOrdersSlice from './slices/userOrdersSlice/userOrdersSlice';
 import accountSlice from './slices/accountSlice/accountSlice';
 import inventorySlice from './slices/inventSlice/inventSlice';
 import orderLookupSlice from './slices/lookupOrderSlice/lookupOrderSlice';

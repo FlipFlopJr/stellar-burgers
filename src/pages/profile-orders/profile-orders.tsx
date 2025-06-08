@@ -5,7 +5,7 @@ import {
   userOrdersFetch,
   selectAccountState
 } from '../../services/slices/accountSlice/accountSlice';
-import { liveOrdersFetch } from '../../services/slices/liveOrdersSlice/liveOrdersSlice';
+import { liveOrdersFetch } from '../../services/slices/userOrdersSlice/userOrdersSlice';
 import { Preloader } from '@ui';
 
 export const ProfileOrders: FC = () => {
