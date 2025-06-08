@@ -55,6 +55,8 @@
     }
   },
   "include": [
-    "src"
+    "src",
+    "**/*.test.ts",
+    "**/*.test.tsx"
   ]
 }

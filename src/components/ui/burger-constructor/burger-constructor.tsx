@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import {
   Button,
   ConstructorElement,
@@ -19,7 +20,6 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
   closeOrderModal
 }) => (
   <section className={styles.burger_constructor}>
-    {}
     {constructorItems.selectedBun ? (
       <div className={`${styles.element} mb-4 mr-4`}>
         <ConstructorElement
@@ -38,7 +38,6 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
       </div>
     )}
 
-    {}
     <ul className={styles.elements}>
       {Array.isArray(constructorItems.filling) &&
       constructorItems.filling.length > 0 ? (
@@ -61,7 +60,6 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
       )}
     </ul>
 
-    {}
     {constructorItems.selectedBun ? (
       <div className={`${styles.element} mt-4 mr-4`}>
         <ConstructorElement
@@ -80,7 +78,6 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
       </div>
     )}
 
-    {}
     <div className={`${styles.total} mt-10 mr-4`}>
       <div className={`${styles.cost} mr-10`}>
         <p className={`text ${styles.text} mr-2`}>{price}</p>
@@ -90,19 +87,19 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         htmlType='button'
         type='primary'
         size='large'
-        children='Оформить заказ'
         onClick={onOrderClick}
-      />
+        data-cy='order-button'
+      >
+        Оформить заказ
+      </Button>
     </div>
 
-    {}
     {orderRequest && (
       <Modal onClose={closeOrderModal} title={'Оформляем заказ...'}>
         <Preloader />
       </Modal>
     )}
 
-    {}
     {orderModalData && (
       <Modal
         onClose={closeOrderModal}
