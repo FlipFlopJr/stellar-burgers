@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NDViOTgzYzJmMzBjMDAxY2IyYWQzNiIsImlhdCI6MTc0OTQwMDY3NiwiZXhwIjoxNzQ5NDAxODc2fQ.BiAJVHEc9GI5Jj4HSUzRuwtdtu7YjnAkl5bwjpzFdzo",
+    "refreshToken": "acd5b4412198763cd1bed9e4df3ef329179b8d55f94c2e431a70cb445946a0c98a6c88af6bfa6f44",
+    "user": {
+        "email": "andrey.lavrinov456@gmail.com",
+        "name": "Andrey"
+    }
+}
